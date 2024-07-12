@@ -73,7 +73,7 @@ class LocationOverviewState extends State<LocationOverview> {
                   ),
                 ),
                 child: Text(
-                  'Login',
+                  'Check In',
                   style: TextStyle(
                     color: Colors.white, // Set text color to white
                     fontSize: 18.0,
