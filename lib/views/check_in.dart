@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
+import 'locationoverview.dart'; // Import the LocationOverview page
+
 
 class CheckIn extends StatefulWidget {
   @override
@@ -129,8 +132,11 @@ class CheckInState extends State<CheckIn> {
               Center(
                 child: SliderButton(
                   action: () async {
-                    /// Do something here OnSlide
-                    return true;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LocationOverview()),
+                  );
+                  return true;
                   },
                   label: Text(
                     "Check in",
@@ -141,7 +147,7 @@ class CheckInState extends State<CheckIn> {
                     ),
                   ),
                   icon: Icon(
-                    CupertinoIcons.location,
+                    CupertinoIcons.location_solid,
                     color: Color(0xFF359756),
                     size: 40.0,
                     semanticLabel: 'Text to announce in accessibility modes',
